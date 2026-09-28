@@ -5,7 +5,7 @@ from api.deps import get_current_user, require_role
 from db.database import get_db
 from db.models import AnalysisResult, User, UserRole
 from schemas.xray import AnalysisResultOut
-from backend.app.services.prediction import predict
+from services.prediction import predict
 
 router = APIRouter(tags=["xray"])
 
