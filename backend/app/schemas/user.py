@@ -7,7 +7,6 @@ from db.models import UserRole
 class UserCreate(BaseModel):
     email: EmailStr
     password: str
-    role: UserRole = UserRole.READONLY
 
 
 class UserOut(BaseModel):

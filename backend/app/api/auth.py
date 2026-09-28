@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from api.deps import get_current_user
 from core.security import create_access_token, hash_password, verify_password
 from db.database import get_db
-from db.models import User
+from db.models import User, UserRole
 from schemas.user import LoginRequest, Token, UserCreate, UserOut
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -13,11 +13,10 @@ def register(payload: UserCreate, db: Session = Depends(get_db)):
     existing = db.query(User).filter(User.email == payload.email).first()
     if existing:
         raise HTTPException(status_code=400, detail="Bu email zaten kayıtlı")
-
     user = User(
         email=payload.email,
         hashed_password=hash_password(payload.password),
-        role=payload.role,
+        role=UserRole.READONLY,
     )
     db.add(user)
     db.commit()
