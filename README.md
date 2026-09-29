@@ -4,19 +4,21 @@ AI-powered chest X-ray pneumonia detection. A ResNet50 transfer-learning model s
 
 ## Screenshots
 
-<img src="images/homepage.png" width="700" alt="Homepage"/>
+<table>
+<tr>
+<td><img src="images/homepage.png" width="440" alt="Homepage"/></td>
+<td><img src="images/upload.png" width="440" alt="Upload screen"/></td>
+</tr>
+</table>
 
 <table>
 <tr>
-<td><img src="images/login.png" width="420" alt="Login screen"/></td>
-<td><img src="images/register.png" width="420" alt="Register screen"/></td>
+<td><img src="images/login.png" width="360" alt="Login screen"/></td>
+<td><img src="images/register.png" width="360" alt="Register screen"/></td>
 </tr>
 <tr>
-<td><img src="images/upload.png" width="420" alt="Upload screen"/></td>
-<td><img src="images/normal.png" width="420" alt="Normal result"/></td>
-</tr>
-<tr>
-<td colspan="2" align="center"><img src="images/pneumo.png" width="420" alt="Pneumonia result"/></td>
+<td><img src="images/normal.png" width="360" alt="Normal result"/></td>
+<td><img src="images/pneumo.png" width="360" alt="Pneumonia result"/></td>
 </tr>
 </table>
 
