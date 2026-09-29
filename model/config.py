@@ -4,7 +4,7 @@ import torch
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data", "chest_xray")
 CHECKPOINT_DIR = os.path.join(BASE_DIR, "checkpoints")
-MODEL_PATH = os.path.join(CHECKPOINT_DIR, "model.pth")
+BEST_MODEL_PATH = os.path.join(CHECKPOINT_DIR, "best_model.pth")
 
 IMG_SIZE = 224
 IMAGENET_MEAN = [0.485, 0.456, 0.406]
