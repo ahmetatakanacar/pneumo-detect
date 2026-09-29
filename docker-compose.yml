@@ -12,5 +12,23 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pneumodetect-api
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+psycopg2://pneumodetect:pneumodetect_dev_pw@postgres:5432/pneumodetect
+      CHECKPOINT_PATH: /app/model/checkpoints/best_model.pth
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./model/checkpoints:/app/model/checkpoints:ro
+    depends_on:
+      - postgres
+
 volumes:
   postgres_data:

@@ -1,0 +1,14 @@
+venv/
+backend/app/venv/
+model/data/
+model/checkpoints/
+.git/
+.gitignore
+.env
+__pycache__/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+**/.pytest_cache/
+.vscode/
+.pytest_cache
